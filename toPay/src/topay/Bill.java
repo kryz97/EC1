@@ -7,8 +7,9 @@ public class Bill {
     public int cxId = 0;
     public int billNum = 0;
     public double amount = 0;
-    public String month = "";
+    public int month = 0;
     public int year = 0;
+    public int status = 0;
 
     
     public String getCxName() {
@@ -43,11 +44,11 @@ public class Bill {
         this.amount = amount;
     }
 
-    public String getMonth() {
+    public int getMonth() {
         return month;
     }
 
-    public void setMonth(String month) {
+    public void setMonth(int month) {
         this.month = month;
     }
 
@@ -57,6 +58,14 @@ public class Bill {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 
 }
