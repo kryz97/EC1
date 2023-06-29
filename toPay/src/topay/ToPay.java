@@ -8,11 +8,11 @@ public class ToPay {
         
         int menu = 0;
         double total=0;
-        JOptionPane.showConfirmDialog(null,"Opcion 1: Ingresar informacion del cliente y la factura\n"+
+        JOptionPane.showConfirmDialog(null,"1: Ingresar informacion del cliente y la factura\n"+
                 "2.Calcular el monto a pagar y pagos a 6 meses\n"+"3.Salir");
-        menu = Integer.parseInt(JOptionPane.showInputDialog("Digite el menu a entrar"));
         
         while (menu!=3){
+            menu = Integer.parseInt(JOptionPane.showInputDialog("Digite el menu a entrar"));
             switch (menu){
                 case 1:
                     JOptionPane.showConfirmDialog(null, "Ingrese la informacion del cliente");
@@ -23,8 +23,7 @@ public class ToPay {
                     bill.setMonth(Integer.parseInt(JOptionPane.showInputDialog("Ingrese el mes de la factura")));
                     bill.setYear(Integer.parseInt(JOptionPane.showInputDialog("Ingrese el año de la factura")));
                     bill.setStatus(Integer.parseInt(JOptionPane.showInputDialog("El estado de la factura es paga\n 1.Yes\n 0.No")));
-                
-                    if (bill.getStatus()==1){
+                    if (bill.getStatus()==0){
                         total = total+bill.getAmount();
                     }
                     break;
@@ -42,6 +41,7 @@ public class ToPay {
                     
                 case 3:
                     break;
+                     
             }  
         }
         
