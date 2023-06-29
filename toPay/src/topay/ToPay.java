@@ -12,6 +12,8 @@ public class ToPay {
                 "2.Calcular el monto a pagar y pagos a 6 meses\n"+"3.Salir");
         
         while (menu!=3){
+            JOptionPane.showConfirmDialog(null,"1: Ingresar informacion del cliente y la factura\n"+
+                "2.Calcular el monto a pagar y pagos a 6 meses\n"+"3.Salir");
             menu = Integer.parseInt(JOptionPane.showInputDialog("Digite el menu a entrar"));
             switch (menu){
                 case 1:
