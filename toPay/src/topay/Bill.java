@@ -1,6 +1,4 @@
-
 package topay;
-
 import javax.swing.JOptionPane;
 
 public class Bill {
@@ -8,16 +6,13 @@ public class Bill {
     public String cxName = "";
     public int cxId = 0;
     public int billNum = 0;
-    public int amount = 0;
-    public int month = 0;
+    public double amount = 0;
+    public String month = "";
     public int year = 0;
     public boolean state = false;
+    public int operation;
 
-    /**
-     *
-     * @return
-     */
-   
+
 //Nombre del cliente
     public String getCxName() {
         cxName = JOptionPane.showInputDialog("Ingrese el nombre del cliente");
@@ -52,22 +47,19 @@ public class Bill {
 
     
 //Total a pagar de la factura
-    public int getAmount() {
+    public double getAmount() {
         amount=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el total de la factura"));
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
     
 //Mes y Año de la factura
-    public int getMonth() {
-        JOptionPane.showConfirmDialog(null, " 1.Enero\n 2.Febrero\n 3.Marzo\n"
-                + " 4.Abril\n 5.Mayo\n 6.Junio\n 7.Julio\n 8.Agosto\n 9.Septiembre\n"
-                + " 10.Ocutbre\n 11.Noviembre\n 12.Diciembre");
-        month=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el mes de la factura"));
+    public String getMonth() {
+        month=JOptionPane.showInputDialog("Ingrese el mes de la factura");
         return month;
     }
 
@@ -93,6 +85,18 @@ public class Bill {
     public void setState(boolean state) {
         this.state = state;
     }
+
+    
+//Operacion
+    public int getOperation() {
+        operation = (amount ((40000*0.05)+40000)/6=7000);
+        return operation;
+    }
+
+    public void setOperation(int operation) {
+        this.operation = operation;
+    }
+
     
     
 }
